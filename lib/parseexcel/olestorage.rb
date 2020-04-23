@@ -351,7 +351,7 @@ module OLE
 		def get_header
 			#0. Check ID
 			@fh.rewind
-			unless(@fh.read(8) == "\xD0\xCF\x11\xE0\xA1\xB1\x1A\xE1").b
+			unless(@fh.read(8) == "\xD0\xCF\x11\xE0\xA1\xB1\x1A\xE1".b)
         raise UnknownFormatError
       end
 			Header.new(@fh)
